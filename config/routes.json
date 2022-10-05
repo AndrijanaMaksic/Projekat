@@ -1,0 +1,70 @@
+{//prilagoditi bazi
+    "books/page:":{//route
+        "controller": "Jewelry",//info
+        "method": "getAllWithPage",
+        "params":{
+            "page": "number"
+        }
+    },
+    "books":{
+        "controller":"Jewelry",
+        "method": "getAll"
+    },
+    "book/:id":{
+        "controller":"Jewelry",
+        "method": "get",
+        "params":{
+            "id":"number"
+        }
+    },
+    "books/search":{
+        "controller": "Jewelry",
+        "method": "search"
+    },
+    "login":{
+        "controller": "Customer",
+        "method": "login"
+    },
+    "sales":{
+        "controller": "Sales",
+        "method": "getByUser",
+        "login":true
+    },
+    "sales/:id": {
+        "controller": "Sales",
+        "method": "get",
+        "login":true,
+        "params":{
+            "id":"number"
+        }
+    },
+    "my-jewelry":{
+        "controller": "Jewelry",
+        "method":"getByUser",
+        "login":true
+    },
+    "jewelry/:id/buy":{
+        "controller":"Sales",
+        "method":"add",
+        "login":true,
+        "params":{
+            "id":"number"
+        }
+    },
+    "book/:id/return":{
+        "controller":"Book",
+        "method": "returnBook",
+        "login":true,
+        "params":{
+            "id":"number"
+        }
+    },
+    "book/:id/borrow":{
+        "controller":"Book",
+        "method": "borrow",
+        "login":true,
+        "params":{
+            "id":"number"
+        }
+    }
+}
